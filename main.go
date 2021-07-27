@@ -1,8 +1,14 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"adver_cart/src/environment"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 func main() {
+
+	environment.Init()
 	app := fiber.New()
 
 	app.Get("/", func(c *fiber.Ctx) error {
